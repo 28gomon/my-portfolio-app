@@ -18,8 +18,8 @@ const Icon = ({ name, className, size, onClick, disabled, ...attrs }) => {
 
 	return (
 		<i
-			className={cls}
 			{ ...attrs }
+			className={cls}
 			onClick={disabled ? null : onClick}
 			style={elemSize}
 		/>
