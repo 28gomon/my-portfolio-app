@@ -2,11 +2,12 @@ import React from 'react';
 import './App.css';
 import Wrapper from "./components/UI/Wrapper/Wrapper";
 import Header from "./components/Header/Header";
-import { Switch, Route } from "react-router-dom";
-import HomePage from "./components/Main/HomePage/HomePage";
-import About from "./components/Main/About/About";
+import { Switch, Route, withRouter, } from "react-router-dom";
+import routes from "./app/routes/routes";
+import Footer from "./components/Footer/Footer";
 
-const App = () => {
+const App = (props) => {
+
 	return (
 		<div className={ 'App' }>
 
@@ -15,14 +16,25 @@ const App = () => {
 			<Wrapper className={'main'}>
 
 				<Switch>
-					<Route path={'/about'} render={() => <About/> }/>
-					<Route exact path={'/'} render={() => <HomePage/> }/>
+					{
+						routes.map((route, index) => {
+							return (
+								<Route
+									key={index}
+									path={route.path}
+									component={route.component}
+									exact={route.exact}
+								/>
+							)
+						})
+					}
 				</Switch>
 
 			</Wrapper>
 
+			{ props.location.pathname !== '/' && <Footer/> }
 		</div>
 	);
 }
 
-export default App;
+export default withRouter(App);

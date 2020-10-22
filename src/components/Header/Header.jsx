@@ -22,7 +22,7 @@ const Header = () => {
 
 	return (
 		<>
-			<div className={ classes.header }>
+			<header className={ classes.header }>
 
 				<Wrapper className={ classes.headerWrapper }>
 
@@ -50,7 +50,7 @@ const Header = () => {
 
 				</Wrapper>
 
-			</div>
+			</header>
 
 			<Menu
 				active={ actionMenu }

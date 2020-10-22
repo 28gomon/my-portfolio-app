@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import './Image.css';
 
-const Image = ( { src, alt, className, width, height, circle, ...attrs } ) => {
+const Image = ( { src, alt, className, width = 100, height = 100, circle, ...attrs } ) => {
 
 	const cls = classNames(
 		'img',
@@ -12,7 +12,7 @@ const Image = ( { src, alt, className, width, height, circle, ...attrs } ) => {
 		{ circle }
 	);
 
-	if ( !src ) src = `https://via.placeholder.com/${ width = 100 }x${ height = 100 }`;
+	if ( !src ) src = `https://via.placeholder.com/${ width }x${ height }`;
 
 	return (
 		<img

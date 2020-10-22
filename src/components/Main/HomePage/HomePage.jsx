@@ -3,9 +3,10 @@ import classes from './HomePage.module.css';
 import { Link } from "react-router-dom";
 import H1 from "../../UI/Titles/H1/H1";
 import H3 from "../../UI/Titles/H3/H3";
-import ButtonGroup from "../../UI/ButtonGroup/ButtonGroup";
-import Button from "../../UI/Button/Button";
-import Icon from "../../UI/Icon/Icon";
+// import ButtonGroup from "../../UI/ButtonGroup/ButtonGroup";
+// import Button from "../../UI/Button/Button";
+// import Icon from "../../UI/Icon/Icon";
+import SocialButtonGroup from "../../UI/SocialButtonGroup/SocilaButtonGroup";
 
 const HomePage = () => {
 	return (
@@ -30,61 +31,7 @@ const HomePage = () => {
 
 			<div className={classes.socialButton}>
 
-				<ButtonGroup
-					styles={{
-						display: 'flex',
-						alignItems: 'center'
-					}}
-				>
-					<Button
-						target={'_blank'}
-						href={'https://www.facebook.com/gomon.sasha'}
-						className={classes.socialLink}
-					>
-						<Icon
-							name={'facebook-square'}
-							size={1.5}
-							className={classes.iconSocial}
-						/>
-					</Button>
-
-					<Button
-						target={'_blank'}
-						href={'https://vk.com/sashblastoff'}
-						className={classes.socialLink}
-					>
-						<Icon
-							name={'vk'}
-							size={1.5}
-							className={classes.iconSocial}
-						/>
-					</Button>
-
-					<Button
-						target={'_blank'}
-						href={'https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%B3%D0%BE%D0%BC%D0%BE%D0%BD-9065b999/'}
-						className={classes.socialLink}
-					>
-						<Icon
-							name={'linkedin'}
-							size={1.5}
-							className={classes.iconSocial}
-						/>
-					</Button>
-
-					<Button
-						target={'_blank'}
-						href={'https://www.instagram.com/28gomon/'}
-						className={classes.socialLink}
-					>
-						<Icon
-							name={'instagram'}
-							size={1.5}
-							className={classes.iconSocial}
-						/>
-					</Button>
-
-				</ButtonGroup>
+				<SocialButtonGroup/>
 
 			</div>
 		</>
